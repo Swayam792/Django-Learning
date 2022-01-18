@@ -14,7 +14,7 @@ class PostUserwritePermission(BasePermission):
         return obj.author == request.user
            
         
-
+          
 class PostList(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Post.postobject.all()
